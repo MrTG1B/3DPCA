@@ -11,9 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
             totalCost = (materialCost/1000) * modelWeight;
         }
         else{
-            totalCost= (materialCost/1000) * modelWeight+(((printTime * printerWattage )/1000)* electricityCost);
+            totalCost= (materialCost/1000) * modelWeight+(((printTime * printerWattage)/1000) * electricityCost);
         }
         // alert(`Total cost: ₹${totalCost.toFixed(2)}`);
         document.getElementById('totalCostValue').textContent = `₹${totalCost.toFixed(2)}`;
+    });
+
+    const resetBtn = document.getElementById('resetBtn');
+    resetBtn.addEventListener('click', () => {
+        document.getElementById('materialCost').value = '';
+        document.getElementById('modelWeight').value = '';
+        document.getElementById('printTime').value = '';
+        document.getElementById('printerWattage').value = '';
+        document.getElementById('electricityCost').value = '';
+        document.getElementById('totalCostValue').textContent = '₹0.00';
     });
 });
