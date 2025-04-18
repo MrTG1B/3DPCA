@@ -2,5 +2,99 @@ body{
     background-color: #3c3a3a;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+#inputForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:10px;
+}
+
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #f4f1f1;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 3px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #12aeae;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #19ca98;
+  }
+  
+  .input-group:hover .label, .input:focus {
+    color: #197db4;
+  }
+
+  #calculateBtn {
+    margin-top: 20px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  #calculateBtn:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  #calculateBtn:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
