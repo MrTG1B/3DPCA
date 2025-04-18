@@ -26,4 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('electricityCost').value = '';
         document.getElementById('totalCostValue').textContent = '₹0.00';
     });
+
+    const serviceWorkerRegistration = () => {
+        navigator.serviceWorker.register('/static/service-worker.js').then(reg => {
+            reg.onupdatefound = () => {
+                const newWorker = reg.installing;
+                newWorker.onstatechange = () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        console.log("New version available. Forcing update.");
+                        newWorker.postMessage({ action: 'skipWaiting' });
+                    }
+                };
+            };
+        });
+        navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload());
+    };
+    if ('serviceWorker' in navigator) setInterval(serviceWorkerRegistration, 5000);
 });
