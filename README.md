@@ -56,7 +56,7 @@ cd 3DPCC
 
 ### 📱 Mobile View
 
-![3DPCC Mobile Screenshot][https://user-images.githubusercontent.com/your-uploaded-path/f8a8da77-34ea-4c8c-91bd-50af442c7a95.jpg](https://github.com/MrTG1B/3DPCC/issues/1#issue-3054848461)
+![3DPCC Mobile Screenshot](https://github.com/user-attachments/assets/07ac78b8-179f-4f6d-9f7d-a0edc066e3b9)
 
 ---
 
